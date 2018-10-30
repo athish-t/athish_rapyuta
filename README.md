@@ -5,7 +5,7 @@
 
 1. Build with CMake
 
-        git clone -b cmake https://github.com/rapyuta-robotics/amrita-2019.git
+        git clone -b master https://github.com/athish-thirumal/athish_rapyuta.git
 
 2. Open the folder with Visual Studio 2017 and build it using CMake
 
