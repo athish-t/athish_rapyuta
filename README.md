@@ -1,4 +1,4 @@
-# amrita-2019
+# A* and DFS path planning algorithms
 2019 campus placement programming round
 
 ### Build from Source
