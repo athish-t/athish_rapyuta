@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Athish\Downloads\Rapyuta\amrita-2019\map_planner\src\map_planner_node.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Athish\Downloads\Rapyuta\amrita-2019\map_planner\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{A8EB9477-8E3F-3362-8805-4D06387459AB}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
