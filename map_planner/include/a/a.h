@@ -41,6 +41,8 @@ struct SquareGrid {
   std::vector<GridLocation> neighbors(GridLocation id) const;
 };
 
+double heuristic(GridLocation a, GridLocation b);
+
 bool operator == (GridLocation a, GridLocation b);
 bool operator != (GridLocation a, GridLocation b);
 bool operator < (GridLocation a, GridLocation b);
@@ -49,8 +51,8 @@ std::basic_iostream<char>::basic_ostream& operator<<(std::basic_iostream<char>::
 void add_rect(SquareGrid& grid, int x1, int y1, int x2, int y2);
 SquareGrid make_diagram1(int width, int height);
 
-template<class Graph>
-void draw_grid(const Graph& graph, int field_width,
+
+void draw_grid(const SquareGrid& graph, int field_width,
                std::map<GridLocation, double>* distances=nullptr,
                std::map<GridLocation, GridLocation>* point_to=nullptr,
                std::vector<GridLocation>* path=nullptr);
@@ -77,9 +79,8 @@ struct PriorityQueue {
   }
 };
 
-template<typename Location>
-std::vector<Location> reconstruct_path(Location start, Location goal, std::map<Location, Location> came_from);
+std::vector<GridLocation> reconstruct_path(GridLocation start, GridLocation goal, std::map<GridLocation, GridLocation> came_from);
 
-inline double heuristic(GridLocation a, GridLocation b);
+
 
 #endif

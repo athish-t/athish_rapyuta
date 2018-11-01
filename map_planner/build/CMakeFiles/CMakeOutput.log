@@ -9,7 +9,7 @@ The output was:
 Microsoft (R) Build Engine version 15.8.169+g1ccb72aefa for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 01-11-2018 10:02:17.
+Build started 01-11-2018 11:32:02.
 Project "C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\3.12.3\CompilerIdC\CompilerIdC.vcxproj" on node 1 (default targets).
 PrepareForBuild:
   Creating directory "Debug\".
@@ -35,7 +35,7 @@ Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:01.00
+Time Elapsed 00:00:00.98
 
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -54,7 +54,7 @@ The output was:
 Microsoft (R) Build Engine version 15.8.169+g1ccb72aefa for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 01-11-2018 10:02:18.
+Build started 01-11-2018 11:32:03.
 Project "C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\3.12.3\CompilerIdCXX\CompilerIdCXX.vcxproj" on node 1 (default targets).
 PrepareForBuild:
   Creating directory "Debug\".
@@ -80,7 +80,7 @@ Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:00.75
+Time Elapsed 00:00:00.81
 
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -92,77 +92,77 @@ The CXX compiler identification is MSVC, found in "C:/Users/Athish/Downloads/Rap
 Determining if the C compiler works passed with the following output:
 Change Dir: C:/Users/Athish/Downloads/Rapyuta/athish_rapyuta/map_planner/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_d6e82.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Run Build Command:"C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_f9de7.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
 Microsoft (R) Build Engine version 15.8.169+g1ccb72aefa for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 01-11-2018 10:02:19.
-Project "C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\cmTC_d6e82.vcxproj" on node 1 (default targets).
+Build started 01-11-2018 11:32:04.
+Project "C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\cmTC_f9de7.vcxproj" on node 1 (default targets).
 PrepareForBuild:
-  Creating directory "cmTC_d6e82.dir\Debug\".
+  Creating directory "cmTC_f9de7.dir\Debug\".
   Creating directory "C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\Debug\".
-  Creating directory "cmTC_d6e82.dir\Debug\cmTC_d6e82.tlog\".
+  Creating directory "cmTC_f9de7.dir\Debug\cmTC_f9de7.tlog\".
 InitializeBuildStatus:
-  Creating "cmTC_d6e82.dir\Debug\cmTC_d6e82.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Creating "cmTC_f9de7.dir\Debug\cmTC_f9de7.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
 ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d6e82.dir\Debug\\" /Fd"cmTC_d6e82.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\testCCompiler.c
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f9de7.dir\Debug\\" /Fd"cmTC_f9de7.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\testCCompiler.c
   Microsoft (R) C/C++ Optimizing Compiler Version 19.15.26732.1 for x86
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
-  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_d6e82.dir\Debug\\" /Fd"cmTC_d6e82.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\testCCompiler.c
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f9de7.dir\Debug\\" /Fd"cmTC_f9de7.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\testCCompiler.c
   testCCompiler.c
   
 Link:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\Debug\cmTC_d6e82.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Athish/Downloads/Rapyuta/athish_rapyuta/map_planner/build/CMakeFiles/CMakeTmp/Debug/cmTC_d6e82.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Athish/Downloads/Rapyuta/athish_rapyuta/map_planner/build/CMakeFiles/CMakeTmp/Debug/cmTC_d6e82.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_d6e82.dir\Debug\testCCompiler.obj
-  cmTC_d6e82.vcxproj -> C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\Debug\cmTC_d6e82.exe
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\Debug\cmTC_f9de7.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Athish/Downloads/Rapyuta/athish_rapyuta/map_planner/build/CMakeFiles/CMakeTmp/Debug/cmTC_f9de7.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Athish/Downloads/Rapyuta/athish_rapyuta/map_planner/build/CMakeFiles/CMakeTmp/Debug/cmTC_f9de7.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_f9de7.dir\Debug\testCCompiler.obj
+  cmTC_f9de7.vcxproj -> C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\Debug\cmTC_f9de7.exe
 FinalizeBuildStatus:
-  Deleting file "cmTC_d6e82.dir\Debug\cmTC_d6e82.tlog\unsuccessfulbuild".
-  Touching "cmTC_d6e82.dir\Debug\cmTC_d6e82.tlog\cmTC_d6e82.lastbuildstate".
-Done Building Project "C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\cmTC_d6e82.vcxproj" (default targets).
+  Deleting file "cmTC_f9de7.dir\Debug\cmTC_f9de7.tlog\unsuccessfulbuild".
+  Touching "cmTC_f9de7.dir\Debug\cmTC_f9de7.tlog\cmTC_f9de7.lastbuildstate".
+Done Building Project "C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\cmTC_f9de7.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:01.21
+Time Elapsed 00:00:01.20
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: C:/Users/Athish/Downloads/Rapyuta/athish_rapyuta/map_planner/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_a298a.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Run Build Command:"C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_7a2b6.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
 Microsoft (R) Build Engine version 15.8.169+g1ccb72aefa for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 01-11-2018 10:02:20.
-Project "C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\cmTC_a298a.vcxproj" on node 1 (default targets).
+Build started 01-11-2018 11:32:06.
+Project "C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\cmTC_7a2b6.vcxproj" on node 1 (default targets).
 PrepareForBuild:
-  Creating directory "cmTC_a298a.dir\Debug\".
+  Creating directory "cmTC_7a2b6.dir\Debug\".
   Creating directory "C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\Debug\".
-  Creating directory "cmTC_a298a.dir\Debug\cmTC_a298a.tlog\".
+  Creating directory "cmTC_7a2b6.dir\Debug\cmTC_7a2b6.tlog\".
 InitializeBuildStatus:
-  Creating "cmTC_a298a.dir\Debug\cmTC_a298a.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Creating "cmTC_7a2b6.dir\Debug\cmTC_7a2b6.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
 ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a298a.dir\Debug\\" /Fd"cmTC_a298a.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCCompilerABI.c"
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_7a2b6.dir\Debug\\" /Fd"cmTC_7a2b6.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCCompilerABI.c"
   Microsoft (R) C/C++ Optimizing Compiler Version 19.15.26732.1 for x86
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
-  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a298a.dir\Debug\\" /Fd"cmTC_a298a.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCCompilerABI.c"
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_7a2b6.dir\Debug\\" /Fd"cmTC_7a2b6.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCCompilerABI.c"
   CMakeCCompilerABI.c
   
 Link:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\Debug\cmTC_a298a.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Athish/Downloads/Rapyuta/athish_rapyuta/map_planner/build/CMakeFiles/CMakeTmp/Debug/cmTC_a298a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Athish/Downloads/Rapyuta/athish_rapyuta/map_planner/build/CMakeFiles/CMakeTmp/Debug/cmTC_a298a.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_a298a.dir\Debug\CMakeCCompilerABI.obj
-  cmTC_a298a.vcxproj -> C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\Debug\cmTC_a298a.exe
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\Debug\cmTC_7a2b6.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Athish/Downloads/Rapyuta/athish_rapyuta/map_planner/build/CMakeFiles/CMakeTmp/Debug/cmTC_7a2b6.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Athish/Downloads/Rapyuta/athish_rapyuta/map_planner/build/CMakeFiles/CMakeTmp/Debug/cmTC_7a2b6.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_7a2b6.dir\Debug\CMakeCCompilerABI.obj
+  cmTC_7a2b6.vcxproj -> C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\Debug\cmTC_7a2b6.exe
 FinalizeBuildStatus:
-  Deleting file "cmTC_a298a.dir\Debug\cmTC_a298a.tlog\unsuccessfulbuild".
-  Touching "cmTC_a298a.dir\Debug\cmTC_a298a.tlog\cmTC_a298a.lastbuildstate".
-Done Building Project "C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\cmTC_a298a.vcxproj" (default targets).
+  Deleting file "cmTC_7a2b6.dir\Debug\cmTC_7a2b6.tlog\unsuccessfulbuild".
+  Touching "cmTC_7a2b6.dir\Debug\cmTC_7a2b6.tlog\cmTC_7a2b6.lastbuildstate".
+Done Building Project "C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\cmTC_7a2b6.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:00.98
+Time Elapsed 00:00:00.93
 
 
 
@@ -170,39 +170,39 @@ Time Elapsed 00:00:00.98
 Detecting C [] compiler features compiled with the following output:
 Change Dir: C:/Users/Athish/Downloads/Rapyuta/athish_rapyuta/map_planner/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_10faa.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Run Build Command:"C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_6f2c2.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
 Microsoft (R) Build Engine version 15.8.169+g1ccb72aefa for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 01-11-2018 10:02:22.
-Project "C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\cmTC_10faa.vcxproj" on node 1 (default targets).
+Build started 01-11-2018 11:32:07.
+Project "C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\cmTC_6f2c2.vcxproj" on node 1 (default targets).
 PrepareForBuild:
-  Creating directory "cmTC_10faa.dir\Debug\".
+  Creating directory "cmTC_6f2c2.dir\Debug\".
   Creating directory "C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\Debug\".
-  Creating directory "cmTC_10faa.dir\Debug\cmTC_10faa.tlog\".
+  Creating directory "cmTC_6f2c2.dir\Debug\cmTC_6f2c2.tlog\".
 InitializeBuildStatus:
-  Creating "cmTC_10faa.dir\Debug\cmTC_10faa.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Creating "cmTC_6f2c2.dir\Debug\cmTC_6f2c2.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
 ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_10faa.dir\Debug\\" /Fd"cmTC_10faa.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\feature_tests.c
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_6f2c2.dir\Debug\\" /Fd"cmTC_6f2c2.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\feature_tests.c
   Microsoft (R) C/C++ Optimizing Compiler Version 19.15.26732.1 for x86
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
-  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_10faa.dir\Debug\\" /Fd"cmTC_10faa.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\feature_tests.c
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_6f2c2.dir\Debug\\" /Fd"cmTC_6f2c2.dir\Debug\vc141.pdb" /Gd /TC /analyze- /FC /errorReport:queue C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\feature_tests.c
   feature_tests.c
   
 Link:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\Debug\cmTC_10faa.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Athish/Downloads/Rapyuta/athish_rapyuta/map_planner/build/CMakeFiles/CMakeTmp/Debug/cmTC_10faa.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Athish/Downloads/Rapyuta/athish_rapyuta/map_planner/build/CMakeFiles/CMakeTmp/Debug/cmTC_10faa.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_10faa.dir\Debug\feature_tests.obj
-  cmTC_10faa.vcxproj -> C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\Debug\cmTC_10faa.exe
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\Debug\cmTC_6f2c2.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Athish/Downloads/Rapyuta/athish_rapyuta/map_planner/build/CMakeFiles/CMakeTmp/Debug/cmTC_6f2c2.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Athish/Downloads/Rapyuta/athish_rapyuta/map_planner/build/CMakeFiles/CMakeTmp/Debug/cmTC_6f2c2.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_6f2c2.dir\Debug\feature_tests.obj
+  cmTC_6f2c2.vcxproj -> C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\Debug\cmTC_6f2c2.exe
 FinalizeBuildStatus:
-  Deleting file "cmTC_10faa.dir\Debug\cmTC_10faa.tlog\unsuccessfulbuild".
-  Touching "cmTC_10faa.dir\Debug\cmTC_10faa.tlog\cmTC_10faa.lastbuildstate".
-Done Building Project "C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\cmTC_10faa.vcxproj" (default targets).
+  Deleting file "cmTC_6f2c2.dir\Debug\cmTC_6f2c2.tlog\unsuccessfulbuild".
+  Touching "cmTC_6f2c2.dir\Debug\cmTC_6f2c2.tlog\cmTC_6f2c2.lastbuildstate".
+Done Building Project "C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\cmTC_6f2c2.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:00.83
+Time Elapsed 00:00:00.89
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -210,77 +210,77 @@ Time Elapsed 00:00:00.83
 Determining if the CXX compiler works passed with the following output:
 Change Dir: C:/Users/Athish/Downloads/Rapyuta/athish_rapyuta/map_planner/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_6bccf.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Run Build Command:"C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_14a56.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
 Microsoft (R) Build Engine version 15.8.169+g1ccb72aefa for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 01-11-2018 10:02:23.
-Project "C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\cmTC_6bccf.vcxproj" on node 1 (default targets).
+Build started 01-11-2018 11:32:08.
+Project "C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\cmTC_14a56.vcxproj" on node 1 (default targets).
 PrepareForBuild:
-  Creating directory "cmTC_6bccf.dir\Debug\".
+  Creating directory "cmTC_14a56.dir\Debug\".
   Creating directory "C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\Debug\".
-  Creating directory "cmTC_6bccf.dir\Debug\cmTC_6bccf.tlog\".
+  Creating directory "cmTC_14a56.dir\Debug\cmTC_14a56.tlog\".
 InitializeBuildStatus:
-  Creating "cmTC_6bccf.dir\Debug\cmTC_6bccf.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Creating "cmTC_14a56.dir\Debug\cmTC_14a56.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
 ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_6bccf.dir\Debug\\" /Fd"cmTC_6bccf.dir\Debug\vc141.pdb" /Gd /TP /analyze- /FC /errorReport:queue C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_14a56.dir\Debug\\" /Fd"cmTC_14a56.dir\Debug\vc141.pdb" /Gd /TP /analyze- /FC /errorReport:queue C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx
   Microsoft (R) C/C++ Optimizing Compiler Version 19.15.26732.1 for x86
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
-  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_6bccf.dir\Debug\\" /Fd"cmTC_6bccf.dir\Debug\vc141.pdb" /Gd /TP /analyze- /FC /errorReport:queue C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_14a56.dir\Debug\\" /Fd"cmTC_14a56.dir\Debug\vc141.pdb" /Gd /TP /analyze- /FC /errorReport:queue C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx
   testCXXCompiler.cxx
   
 Link:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\Debug\cmTC_6bccf.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Athish/Downloads/Rapyuta/athish_rapyuta/map_planner/build/CMakeFiles/CMakeTmp/Debug/cmTC_6bccf.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Athish/Downloads/Rapyuta/athish_rapyuta/map_planner/build/CMakeFiles/CMakeTmp/Debug/cmTC_6bccf.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_6bccf.dir\Debug\testCXXCompiler.obj
-  cmTC_6bccf.vcxproj -> C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\Debug\cmTC_6bccf.exe
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\Debug\cmTC_14a56.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Athish/Downloads/Rapyuta/athish_rapyuta/map_planner/build/CMakeFiles/CMakeTmp/Debug/cmTC_14a56.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Athish/Downloads/Rapyuta/athish_rapyuta/map_planner/build/CMakeFiles/CMakeTmp/Debug/cmTC_14a56.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_14a56.dir\Debug\testCXXCompiler.obj
+  cmTC_14a56.vcxproj -> C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\Debug\cmTC_14a56.exe
 FinalizeBuildStatus:
-  Deleting file "cmTC_6bccf.dir\Debug\cmTC_6bccf.tlog\unsuccessfulbuild".
-  Touching "cmTC_6bccf.dir\Debug\cmTC_6bccf.tlog\cmTC_6bccf.lastbuildstate".
-Done Building Project "C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\cmTC_6bccf.vcxproj" (default targets).
+  Deleting file "cmTC_14a56.dir\Debug\cmTC_14a56.tlog\unsuccessfulbuild".
+  Touching "cmTC_14a56.dir\Debug\cmTC_14a56.tlog\cmTC_14a56.lastbuildstate".
+Done Building Project "C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\cmTC_14a56.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:01.02
+Time Elapsed 00:00:00.87
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: C:/Users/Athish/Downloads/Rapyuta/athish_rapyuta/map_planner/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_72b84.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Run Build Command:"C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_f6bae.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
 Microsoft (R) Build Engine version 15.8.169+g1ccb72aefa for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 01-11-2018 10:02:24.
-Project "C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\cmTC_72b84.vcxproj" on node 1 (default targets).
+Build started 01-11-2018 11:32:09.
+Project "C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\cmTC_f6bae.vcxproj" on node 1 (default targets).
 PrepareForBuild:
-  Creating directory "cmTC_72b84.dir\Debug\".
+  Creating directory "cmTC_f6bae.dir\Debug\".
   Creating directory "C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\Debug\".
-  Creating directory "cmTC_72b84.dir\Debug\cmTC_72b84.tlog\".
+  Creating directory "cmTC_f6bae.dir\Debug\cmTC_f6bae.tlog\".
 InitializeBuildStatus:
-  Creating "cmTC_72b84.dir\Debug\cmTC_72b84.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Creating "cmTC_f6bae.dir\Debug\cmTC_f6bae.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
 ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_72b84.dir\Debug\\" /Fd"cmTC_72b84.dir\Debug\vc141.pdb" /Gd /TP /analyze- /FC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCXXCompilerABI.cpp"
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_f6bae.dir\Debug\\" /Fd"cmTC_f6bae.dir\Debug\vc141.pdb" /Gd /TP /analyze- /FC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCXXCompilerABI.cpp"
   Microsoft (R) C/C++ Optimizing Compiler Version 19.15.26732.1 for x86
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
-  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_72b84.dir\Debug\\" /Fd"cmTC_72b84.dir\Debug\vc141.pdb" /Gd /TP /analyze- /FC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCXXCompilerABI.cpp"
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_f6bae.dir\Debug\\" /Fd"cmTC_f6bae.dir\Debug\vc141.pdb" /Gd /TP /analyze- /FC /errorReport:queue "C:\Program Files\CMake\share\cmake-3.12\Modules\CMakeCXXCompilerABI.cpp"
   CMakeCXXCompilerABI.cpp
   
 Link:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\Debug\cmTC_72b84.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Athish/Downloads/Rapyuta/athish_rapyuta/map_planner/build/CMakeFiles/CMakeTmp/Debug/cmTC_72b84.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Athish/Downloads/Rapyuta/athish_rapyuta/map_planner/build/CMakeFiles/CMakeTmp/Debug/cmTC_72b84.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_72b84.dir\Debug\CMakeCXXCompilerABI.obj
-  cmTC_72b84.vcxproj -> C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\Debug\cmTC_72b84.exe
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\Debug\cmTC_f6bae.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Athish/Downloads/Rapyuta/athish_rapyuta/map_planner/build/CMakeFiles/CMakeTmp/Debug/cmTC_f6bae.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Athish/Downloads/Rapyuta/athish_rapyuta/map_planner/build/CMakeFiles/CMakeTmp/Debug/cmTC_f6bae.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_f6bae.dir\Debug\CMakeCXXCompilerABI.obj
+  cmTC_f6bae.vcxproj -> C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\Debug\cmTC_f6bae.exe
 FinalizeBuildStatus:
-  Deleting file "cmTC_72b84.dir\Debug\cmTC_72b84.tlog\unsuccessfulbuild".
-  Touching "cmTC_72b84.dir\Debug\cmTC_72b84.tlog\cmTC_72b84.lastbuildstate".
-Done Building Project "C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\cmTC_72b84.vcxproj" (default targets).
+  Deleting file "cmTC_f6bae.dir\Debug\cmTC_f6bae.tlog\unsuccessfulbuild".
+  Touching "cmTC_f6bae.dir\Debug\cmTC_f6bae.tlog\cmTC_f6bae.lastbuildstate".
+Done Building Project "C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\cmTC_f6bae.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:00.91
+Time Elapsed 00:00:00.93
 
 
 
@@ -288,39 +288,39 @@ Time Elapsed 00:00:00.91
 Detecting CXX [] compiler features compiled with the following output:
 Change Dir: C:/Users/Athish/Downloads/Rapyuta/athish_rapyuta/map_planner/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_21bf5.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
+Run Build Command:"C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/MSBuild/15.0/Bin/MSBuild.exe" "cmTC_7f2c8.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=15.0"
 Microsoft (R) Build Engine version 15.8.169+g1ccb72aefa for .NET Framework
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-Build started 01-11-2018 10:02:25.
-Project "C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\cmTC_21bf5.vcxproj" on node 1 (default targets).
+Build started 01-11-2018 11:32:10.
+Project "C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\cmTC_7f2c8.vcxproj" on node 1 (default targets).
 PrepareForBuild:
-  Creating directory "cmTC_21bf5.dir\Debug\".
+  Creating directory "cmTC_7f2c8.dir\Debug\".
   Creating directory "C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\Debug\".
-  Creating directory "cmTC_21bf5.dir\Debug\cmTC_21bf5.tlog\".
+  Creating directory "cmTC_7f2c8.dir\Debug\cmTC_7f2c8.tlog\".
 InitializeBuildStatus:
-  Creating "cmTC_21bf5.dir\Debug\cmTC_21bf5.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Creating "cmTC_7f2c8.dir\Debug\cmTC_7f2c8.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
 ClCompile:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_21bf5.dir\Debug\\" /Fd"cmTC_21bf5.dir\Debug\vc141.pdb" /Gd /TP /analyze- /FC /errorReport:queue C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\feature_tests.cxx
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\CL.exe /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_7f2c8.dir\Debug\\" /Fd"cmTC_7f2c8.dir\Debug\vc141.pdb" /Gd /TP /analyze- /FC /errorReport:queue C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\feature_tests.cxx
   Microsoft (R) C/C++ Optimizing Compiler Version 19.15.26732.1 for x86
   Copyright (C) Microsoft Corporation.  All rights reserved.
   
-  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_21bf5.dir\Debug\\" /Fd"cmTC_21bf5.dir\Debug\vc141.pdb" /Gd /TP /analyze- /FC /errorReport:queue C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\feature_tests.cxx
+  cl /c /Zi /W3 /WX- /diagnostics:classic /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_7f2c8.dir\Debug\\" /Fd"cmTC_7f2c8.dir\Debug\vc141.pdb" /Gd /TP /analyze- /FC /errorReport:queue C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\feature_tests.cxx
   feature_tests.cxx
   
 Link:
-  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\Debug\cmTC_21bf5.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Athish/Downloads/Rapyuta/athish_rapyuta/map_planner/build/CMakeFiles/CMakeTmp/Debug/cmTC_21bf5.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Athish/Downloads/Rapyuta/athish_rapyuta/map_planner/build/CMakeFiles/CMakeTmp/Debug/cmTC_21bf5.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_21bf5.dir\Debug\feature_tests.obj
-  cmTC_21bf5.vcxproj -> C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\Debug\cmTC_21bf5.exe
+  C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\Debug\cmTC_7f2c8.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Athish/Downloads/Rapyuta/athish_rapyuta/map_planner/build/CMakeFiles/CMakeTmp/Debug/cmTC_7f2c8.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Athish/Downloads/Rapyuta/athish_rapyuta/map_planner/build/CMakeFiles/CMakeTmp/Debug/cmTC_7f2c8.lib" /MACHINE:X86 /SAFESEH  /machine:X86 cmTC_7f2c8.dir\Debug\feature_tests.obj
+  cmTC_7f2c8.vcxproj -> C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\Debug\cmTC_7f2c8.exe
 FinalizeBuildStatus:
-  Deleting file "cmTC_21bf5.dir\Debug\cmTC_21bf5.tlog\unsuccessfulbuild".
-  Touching "cmTC_21bf5.dir\Debug\cmTC_21bf5.tlog\cmTC_21bf5.lastbuildstate".
-Done Building Project "C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\cmTC_21bf5.vcxproj" (default targets).
+  Deleting file "cmTC_7f2c8.dir\Debug\cmTC_7f2c8.tlog\unsuccessfulbuild".
+  Touching "cmTC_7f2c8.dir\Debug\cmTC_7f2c8.tlog\cmTC_7f2c8.lastbuildstate".
+Done Building Project "C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\CMakeFiles\CMakeTmp\cmTC_7f2c8.vcxproj" (default targets).
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:00.94
+Time Elapsed 00:00:01.07
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers

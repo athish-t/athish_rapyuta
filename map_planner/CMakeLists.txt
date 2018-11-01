@@ -8,8 +8,7 @@ add_compile_options(-std=c++11)
 ###########
 
 include_directories(
-  include/map_planner
-  include/a
+  include
   ${catkin_INCLUDE_DIRS}
 )
 

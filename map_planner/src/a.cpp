@@ -1,5 +1,5 @@
-#include <map_planner.h>
-#include <a.h>
+#include <map_planner/map_planner.h>
+#include <a/a.h>
 #include <iostream>
 #include <iomanip>
 #include <map>
@@ -60,8 +60,12 @@ std::basic_iostream<char>::basic_ostream& operator<<(std::basic_iostream<char>::
   return out;
 }
 
-template<class Graph>
-void draw_grid(const Graph& graph, int field_width,
+double heuristic(GridLocation a, GridLocation b) 
+{
+  return std::abs(a.x - b.x) + std::abs(a.y - b.y);
+}
+
+void draw_grid(const SquareGrid& graph, int field_width,
                std::map<GridLocation, double>* distances,
                std::map<GridLocation, GridLocation>* point_to,
                std::vector<GridLocation>* path) {
@@ -108,13 +112,13 @@ SquareGrid make_diagram1(int width, int height) {
 }
 
 
-template<typename Location>
-std::vector<Location> reconstruct_path(
-   Location start, Location goal,
-   std::map<Location, Location> came_from
+
+std::vector<GridLocation> reconstruct_path(
+   GridLocation start, GridLocation goal,
+   std::map<GridLocation, GridLocation> came_from
 ) {
-  std::vector<Location> path;
-  Location current = goal;
+  std::vector<GridLocation> path;
+  GridLocation current = goal;
   while (current != start) {
     path.push_back(current);
     current = came_from[current];
@@ -124,7 +128,3 @@ std::vector<Location> reconstruct_path(
   return path;
 }
 
-inline double heuristic(GridLocation a, GridLocation b) 
-{
-  return std::abs(a.x - b.x) + std::abs(a.y - b.y);
-}

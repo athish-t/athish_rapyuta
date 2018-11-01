@@ -1,5 +1,5 @@
-#include <map_planner.h>
-#include <a.h>
+#include <map_planner/map_planner.h>
+#include <a/a.h>
 #include <iostream>
 #include <iomanip>
 #include <map>
@@ -24,17 +24,15 @@ void Planner::initialize(std::string map_name /*,DEFINE YOUR DATASTRUCTURE e.g G
     **/
 }
 
-template<typename Location, typename Graph>
-bool DFSPlanner::makePlan(Graph graph, Location start, Location goal, std::map<Location, Location>& came_from, std::map<Location, double>& cost_so_far) 
+bool DFSPlanner::makePlan(SquareGrid graph, GridLocation start, GridLocation goal, std::map<GridLocation, GridLocation>& came_from, std::map<GridLocation, double>& cost_so_far) 
 {
     std::cout << "Yet to be implemented" << std::endl;
     return false;
 }
 
-template<typename Location, typename Graph>
-bool AStarPlanner::makePlan(Graph graph, Location start, Location goal, std::map<Location,Location>& came_from, std::map<Location, double>& cost_so_far) 
+bool AStarPlanner::makePlan(SquareGrid graph, GridLocation start, GridLocation goal, std::map<GridLocation,GridLocation>& came_from, std::map<GridLocation, double>& cost_so_far) 
 {
-    PriorityQueue<Location, double> frontier;
+    PriorityQueue<GridLocation, double> frontier;
 	frontier.put(start, 0);
 
 	came_from[start] = start;
@@ -42,14 +40,14 @@ bool AStarPlanner::makePlan(Graph graph, Location start, Location goal, std::map
 	  
 	while (!frontier.empty()) 
 	{
-		Location current = frontier.get();
+		GridLocation current = frontier.get();
 
 	    if (current == goal) 
 	    {
 	      break;
 	    }
 
-	    for (Location next : graph.neighbors(current)) 
+	    for (GridLocation next : graph.neighbors(current)) 
 	    {
 		    double new_cost = cost_so_far[current];// + graph.cost(current, next);
 		    if (cost_so_far.find(next) == cost_so_far.end() || new_cost < cost_so_far[next]) 

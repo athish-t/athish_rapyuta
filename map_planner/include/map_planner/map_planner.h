@@ -1,6 +1,6 @@
 #ifndef MAP_PLANNER_MAP_PLANNER_H
 #define MAP_PLANNER_MAP_PLANNER_H
-
+#include <a/a.h>
 #include <iostream>
 #include <string>
 #include <vector>
@@ -32,8 +32,7 @@ namespace amrita2019 {
        * @param plan YOUR SOLUTION (NOTE: IT IS PASSED BY REFERENCE!)
        * @return PLEASE RETURN TRUE IF YOUR ALGORITHM WAS ABLE TO COMPUTE THE PLAN IN THE INHERTIED CLASS
        */
-      template<typename Location, typename Graph>
-      bool makePlan(Graph graph, Location start, Location goal, std::map<Location, Location>& came_from, std::map<Location, double>& cost_so_far)  = 0;
+      virtual bool makePlan(SquareGrid graph, GridLocation start, GridLocation goal, std::map<GridLocation, GridLocation>& came_from, std::map<GridLocation, double>& cost_so_far) = 0;
 
       /**
        * @brief  Initialization function for the BaseGlobalPlanner
@@ -54,16 +53,14 @@ namespace amrita2019 {
   class DFSPlanner: public Planner {
       public:
         DFSPlanner(){};
-        template<typename Location, typename Graph>
-        bool makePlan(Graph graph, Location start, Location goal, std::map<Location, Location>& came_from, std::map<Location, double>& cost_so_far); 
+        bool makePlan(SquareGrid graph, GridLocation start, GridLocation goal, std::map<GridLocation, GridLocation>& came_from, std::map<GridLocation, double>& cost_so_far); 
         ~DFSPlanner(){};
   };
 
   class AStarPlanner: public Planner {
       public:
         AStarPlanner(){};
-        template<typename Location, typename Graph>
-        bool makePlan(Graph graph, Location start, Location goal, std::map<Location, Location>& came_from, std::map<Location, double>& cost_so_far); 
+        bool makePlan(SquareGrid graph, GridLocation start, GridLocation goal, std::map<GridLocation, GridLocation>& came_from, std::map<GridLocation, double>& cost_so_far); 
         ~AStarPlanner(){}
   };
 
