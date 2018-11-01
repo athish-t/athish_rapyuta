@@ -8,16 +8,18 @@ add_compile_options(-std=c++11)
 ###########
 
 include_directories(
-  include
+  include/map_planner
+  include/a
   ${catkin_INCLUDE_DIRS}
 )
 
-add_library(${PROJECT_NAME}
+add_library(map_planner
    src/map_planner.cpp
+   src/a.cpp
 )
 
 add_executable(map_planner_node src/map_planner_node.cpp)
 
 target_link_libraries(map_planner_node
-   ${PROJECT_NAME}
+   map_planner
 )

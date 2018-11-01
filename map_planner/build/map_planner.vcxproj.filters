@@ -4,6 +4,9 @@
     <ClCompile Include="C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\src\map_planner.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\src\a.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\CMakeLists.txt" />

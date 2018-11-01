@@ -1,11 +1,25 @@
-#include <map_planner/map_planner.h>
+#include <map_planner.h>
+#include <a.h>
+#include <iostream>
+#include <iomanip>
+#include <map>
+#include <set>
+#include <array>
+#include <vector>
+#include <utility>
+#include <queue>
+#include <tuple>
+#include <algorithm>
+#include <cstdlib>
+#include <string>
+
 
 int main (int argc, char *argv[]) {
 
     std::cout << "Planner executable called" << std::endl;
     std::string map_name = "maze.pgm";
 
-    amrita2019::AStarPlanner astar; // construct astar planner
+    amrita2019::AStarPlanner astar; // construct astar planner.
     amrita2019::DFSPlanner dfs; // construct dfs planner
 
     astar.initialize(map_name);
@@ -13,9 +27,22 @@ int main (int argc, char *argv[]) {
 
     /** GET the start and goal from user and print the plan
     astar.makePlan(.....);
-    dfs.makePlan (....);
+    dfs.makePlan (....);*/
 
+    SquareGrid grid = make_diagram1(30,15);
+    GridLocation start{1, 4};
+    GridLocation goal{25, 10};
+    std::map<GridLocation, GridLocation> came_from;
+    std::map<GridLocation, double> cost_so_far;
 
+    astar.makePlan(grid, start, goal, came_from, cost_so_far);
+
+    draw_grid(grid, 2, nullptr, &came_from, nullptr);
+    std::cout << '\n';
+    draw_grid(grid, 3, &cost_so_far, nullptr, nullptr);
+    std::cout << '\n';
+    std::vector<GridLocation> path = reconstruct_path(start, goal, came_from);
+    draw_grid(grid, 3, nullptr, nullptr, &path);
 
     /**
     BONUS POINTS: 
