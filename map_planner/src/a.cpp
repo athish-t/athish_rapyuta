@@ -94,29 +94,23 @@ void draw_grid(const SquareGrid& graph, int field_width,
   }
 }
 
-void add_rect(SquareGrid& grid, int x1, int y1, int x2, int y2) {
-  for (int x = x1; x < x2; ++x) {
-    for (int y = y1; y < y2; ++y) {
+void add_Wall(SquareGrid& grid, int x, int y) {
       grid.walls.insert(GridLocation{x, y});
-    }
-  }
 }
-
-SquareGrid make_diagram1(int width, int height) {
+/*
+SquareGrid initializeGrid(int width, int height) {
   SquareGrid grid(width, height);
   add_rect(grid, 3, 3, 5, 12);
   add_rect(grid, 13, 4, 15, 15);
   add_rect(grid, 21, 0, 23, 7);
   add_rect(grid, 23, 5, 26, 7);
   return grid;
-}
+}*/
 
 
 
-std::vector<GridLocation> reconstruct_path(
-   GridLocation start, GridLocation goal,
-   std::map<GridLocation, GridLocation> came_from
-) {
+std::vector<GridLocation> reconstruct_path(GridLocation start, GridLocation goal, std::map<GridLocation, GridLocation> came_from) 
+{
   std::vector<GridLocation> path;
   GridLocation current = goal;
   while (current != start) {

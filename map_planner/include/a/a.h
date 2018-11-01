@@ -48,8 +48,8 @@ bool operator != (GridLocation a, GridLocation b);
 bool operator < (GridLocation a, GridLocation b);
 std::basic_iostream<char>::basic_ostream& operator<<(std::basic_iostream<char>::basic_ostream& out, const GridLocation& loc);
 
-void add_rect(SquareGrid& grid, int x1, int y1, int x2, int y2);
-SquareGrid make_diagram1(int width, int height);
+void add_Wall(SquareGrid& grid, int x, int y);
+SquareGrid initializeGrid(int width, int height);
 
 
 void draw_grid(const SquareGrid& graph, int field_width,

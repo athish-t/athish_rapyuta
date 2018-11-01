@@ -17,8 +17,6 @@
 
 namespace amrita2019 {
 
-  
-
   /**
    * @class Planner
    * @brief Provides an interface for global planners used in navigation. All global planners written as plugins for the navigation stack must adhere to this interface.
@@ -39,7 +37,7 @@ namespace amrita2019 {
        * @param  path of the bitmap
        * @param  TODO: Define a new data structure to convert the bitmap image to YOUR data structure
        */
-      virtual void initialize(std::string map_name /*,*DEFINE YOUR DATASTRUCTURE e.g GRAPH*/);
+      virtual void initialize(std::string map_path ,SquareGrid& grid);
 
       /**
        * @brief  Virtual destructor

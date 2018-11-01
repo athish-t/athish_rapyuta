@@ -12,16 +12,39 @@
 #include <algorithm>
 #include <cstdlib>
 #include <string>
+#include <fstream>
+#include <sstream>
 
 using namespace amrita2019;
 
-void Planner::initialize(std::string map_name /*,DEFINE YOUR DATASTRUCTURE e.g GRAPH*/) {
+void Planner::initialize(std::string map_path, SquareGrid& grid) {
     /**
-    get the map_name, for non-ROS users, get the path directly and open the file in C++
-
-    std::string map_path = ros::package::getPath("map_planner") + "/data" + "/" + map_name;
     PLEASE FILL IN YOUR LOGIC TO OPEN THIS FILE AND CONVERT TO THE DATASTRUCTURE OF YOUR CHOICE.
     **/
+	static int row = 0, col = 0, numrows , numcols ;
+	unsigned char ch;
+    std::ifstream infile;
+    infile.open(map_path, std::ios::binary);  
+    std::string inputLine = "";
+    for(int i=0; i<4; i++)
+    {
+    	getline(infile,inputLine);
+    	//std::cout << inputLine <<"\n";
+    }
+    for(row = 0; row<110; row++)
+    {
+    	for(col = 0; col<110 ;col++)
+    	{
+        	infile >> ch;
+        	if ((int)ch <250)
+        	{
+        		grid.walls.insert(GridLocation{col, row});
+        	}
+        	//std::cout<< (int)ch;
+      	}
+      	//cout<<endl;
+    }
+    infile.close();
 }
 
 bool DFSPlanner::makePlan(SquareGrid graph, GridLocation start, GridLocation goal, std::map<GridLocation, GridLocation>& came_from, std::map<GridLocation, double>& cost_so_far) 
