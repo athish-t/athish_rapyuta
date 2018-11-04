@@ -1,5 +1,4 @@
 #include <map_planner/map_planner.h>
-#include <a/a.h>
 #include <iostream>
 #include <iomanip>
 #include <map>
@@ -111,4 +110,116 @@ bool AStarPlanner::makePlan(SquareGrid graph, GridLocation start, GridLocation g
 	    }
 	}
     return true;
+}
+
+bool SquareGrid::in_bounds(GridLocation id) const 
+{
+    return 0 <= id.x && id.x < width
+        && 0 <= id.y && id.y < height;
+}
+
+bool SquareGrid::passable(GridLocation id) const 
+{
+    return walls.find(id) == walls.end();
+}
+
+std::vector<GridLocation> SquareGrid::neighbors(GridLocation id) const
+{
+    std::vector<GridLocation> results;
+
+    for (GridLocation dir : DIRS) {
+      GridLocation next{id.x + dir.x, id.y + dir.y};
+      if (in_bounds(next) && passable(next)) {
+        results.push_back(next);
+      }
+    }
+
+    if ((id.x + id.y) % 2 == 0) {
+      // aesthetic improvement on square grids
+      std::reverse(results.begin(), results.end());
+    }
+
+    return results;
+}
+
+bool operator == (GridLocation a, GridLocation b) {
+  return a.x == b.x && a.y == b.y;
+}
+
+bool operator != (GridLocation a, GridLocation b) {
+  return !(a == b);
+}
+
+bool operator < (GridLocation a, GridLocation b) {
+  return std::tie(a.x, a.y) < std::tie(b.x, b.y);
+}
+
+std::basic_iostream<char>::basic_ostream& operator<<(std::basic_iostream<char>::basic_ostream& out, const GridLocation& loc) {
+  out << '(' << loc.x << ',' << loc.y << ')';
+  return out;
+}
+
+double heuristic(GridLocation a, GridLocation b) 
+{
+  return std::abs(a.x - b.x) + std::abs(a.y - b.y);
+}
+
+void draw_grid(const SquareGrid& graph, int field_width,
+               std::map<GridLocation, double>* distances,
+               std::map<GridLocation, GridLocation>* point_to,
+               std::vector<GridLocation>* path) {
+  for (int y = 0; y != graph.height; ++y) {
+    for (int x = 0; x != graph.width; ++x) {
+      GridLocation id {x, y};
+      std::cout << std::left << std::setw(field_width);
+      if (graph.walls.find(id) != graph.walls.end()) {
+        std::cout << std::string(field_width, '#');
+      } else if (point_to != nullptr && point_to->count(id)) {
+        GridLocation next = (*point_to)[id];
+        if (next.x == x + 1) { std::cout << "> "; }
+        else if (next.x == x - 1) { std::cout << "< "; }
+        else if (next.y == y + 1) { std::cout << "v "; }
+        else if (next.y == y - 1) { std::cout << "^ "; }
+        else { std::cout << "* "; }
+      } else if (distances != nullptr && distances->count(id)) {
+        std::cout << (*distances)[id];
+      } else if (path != nullptr && find(path->begin(), path->end(), id) != path->end()) {
+        std::cout << '@';
+      } else {
+        std::cout << '.';
+      }
+    }
+    std::cout << '\n';
+  }
+}
+
+void add_Wall(SquareGrid& grid, int x, int y) {
+      grid.walls.insert(GridLocation{x, y});
+}
+/*
+SquareGrid initializeGrid(int width, int height) {
+  SquareGrid grid(width, height);
+  add_rect(grid, 3, 3, 5, 12);
+  add_rect(grid, 13, 4, 15, 15);
+  add_rect(grid, 21, 0, 23, 7);
+  add_rect(grid, 23, 5, 26, 7);
+  return grid;
+}*/
+
+
+
+void reconstruct_path(GridLocation start, GridLocation goal, std::map<GridLocation, GridLocation> came_from) 
+{
+  std::vector<GridLocation> path;
+  path.clear();
+  GridLocation current = goal;
+  while (current != start) {
+    path.push_back(current);
+    current = came_from[current];
+  }
+  path.push_back(start); // optional
+  std::reverse(path.begin(), path.end());
+  std::cout << std::endl;
+  for(int i=0; i<path.size(); ++i)
+        std::cout << path[i] << ' ';
 }

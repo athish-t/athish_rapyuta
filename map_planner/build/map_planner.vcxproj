@@ -266,7 +266,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\src\map_planner.cpp" />
-    <ClCompile Include="C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\src\a.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\Users\Athish\Downloads\Rapyuta\athish_rapyuta\map_planner\build\ZERO_CHECK.vcxproj">
