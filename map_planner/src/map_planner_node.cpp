@@ -28,18 +28,21 @@ int main (int argc, char *argv[]) {
     std::map<GridLocation, GridLocation> came_from;
     std::map<GridLocation, double> cost_so_far;
 
-    std::cout << "Enter start coordinates:\n";
+    std::cout << "Enter start coordinates: ";
     std::cin >> start.x >> start.y;
-    std::cout << "\nEnter goal coordintes:";
+    std::cout << "\nEnter goal coordintes: ";
     std::cin >> goal.x >> goal.y;
+    std::cout << std::endl;
 
     astar.initialize(map_path, grid);
     dfs.initialize(map_path, grid);
 
     astar.makePlan(grid, start, goal, came_from, cost_so_far);
+    std::cout << "\nPath planned using A* algorithm:\n" ;
     reconstruct_path(start, goal, came_from);
 
     dfs.makePlan (grid, start, goal, came_from, cost_so_far);
+    std::cout << "\nPath planned using DFS algorithm:\n" ;
     reconstruct_path(start, goal, came_from);
 
     /*draw_grid(grid, 2, nullptr, &came_from, nullptr);

@@ -222,4 +222,5 @@ void reconstruct_path(GridLocation start, GridLocation goal, std::map<GridLocati
   std::cout << std::endl;
   for(int i=0; i<path.size(); ++i)
         std::cout << path[i] << ' ';
+  std::cout << std::endl ;
 }
