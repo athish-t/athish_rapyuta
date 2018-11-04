@@ -14,6 +14,7 @@
 #include <string>
 #include <fstream>
 #include <sstream>
+#include <stack>
 
 using namespace amrita2019;
 
@@ -49,12 +50,39 @@ void Planner::initialize(std::string map_path, SquareGrid& grid) {
 
 bool DFSPlanner::makePlan(SquareGrid graph, GridLocation start, GridLocation goal, std::map<GridLocation, GridLocation>& came_from, std::map<GridLocation, double>& cost_so_far) 
 {
-    std::cout << "Yet to be implemented" << std::endl;
+    came_from.clear();
+    cost_so_far.clear();
+    std::stack<GridLocation> frontier;
+    frontier.push(start);
+
+    came_from[start] = start;
+
+    while (!frontier.empty()) 
+    {
+          GridLocation current = frontier.top();
+          frontier.pop();
+
+          if (current == goal) 
+          {
+            break;
+          }
+        
+          for (GridLocation next : graph.neighbors(current)) 
+          {
+            if (came_from.find(next) == came_from.end()) 
+            {
+                frontier.push(next);
+                came_from[next] = current;
+            }
+          }
+    }
     return false;
 }
 
 bool AStarPlanner::makePlan(SquareGrid graph, GridLocation start, GridLocation goal, std::map<GridLocation,GridLocation>& came_from, std::map<GridLocation, double>& cost_so_far) 
 {
+    came_from.clear();
+    cost_so_far.clear();
     PriorityQueue<GridLocation, double> frontier;
 	frontier.put(start, 0);
 
@@ -82,5 +110,5 @@ bool AStarPlanner::makePlan(SquareGrid graph, GridLocation start, GridLocation g
 		    }
 	    }
 	}
-    return false;
+    return true;
 }

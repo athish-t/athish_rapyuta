@@ -3,7 +3,7 @@
 #include <iostream>
 #include <iomanip>
 #include <map>
-#include <set>//dcdc
+#include <set>
 #include <array>
 #include <vector>
 #include <utility>
@@ -109,9 +109,10 @@ SquareGrid initializeGrid(int width, int height) {
 
 
 
-std::vector<GridLocation> reconstruct_path(GridLocation start, GridLocation goal, std::map<GridLocation, GridLocation> came_from) 
+void reconstruct_path(GridLocation start, GridLocation goal, std::map<GridLocation, GridLocation> came_from) 
 {
   std::vector<GridLocation> path;
+  path.clear();
   GridLocation current = goal;
   while (current != start) {
     path.push_back(current);
@@ -119,6 +120,8 @@ std::vector<GridLocation> reconstruct_path(GridLocation start, GridLocation goal
   }
   path.push_back(start); // optional
   std::reverse(path.begin(), path.end());
-  return path;
+  std::cout << std::endl;
+  for(int i=0; i<path.size(); ++i)
+        std::cout << path[i] << ' ';
 }
 

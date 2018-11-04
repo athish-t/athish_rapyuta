@@ -59,10 +59,10 @@ void draw_grid(const SquareGrid& graph, int field_width,
 
 
 template<typename T, typename priority_t>
-struct PriorityQueue {
+struct PriorityQueue 
+{
   typedef std::pair<priority_t, T> PQElement;
-  std::priority_queue<PQElement, std::vector<PQElement>,
-                 std::greater<PQElement>> elements;
+  std::priority_queue <PQElement, std::vector<PQElement>, std::greater<PQElement>> elements;
 
   inline bool empty() const {
      return elements.empty();
@@ -79,7 +79,7 @@ struct PriorityQueue {
   }
 };
 
-std::vector<GridLocation> reconstruct_path(GridLocation start, GridLocation goal, std::map<GridLocation, GridLocation> came_from);
+void reconstruct_path(GridLocation start, GridLocation goal, std::map<GridLocation, GridLocation> came_from);
 
 
 

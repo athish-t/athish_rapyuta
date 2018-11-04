@@ -37,20 +37,17 @@ int main (int argc, char *argv[]) {
     astar.initialize(map_path, grid);
     dfs.initialize(map_path, grid);
 
-    /** GET the start and goal from user and print the plan
-    dfs.makePlan (....);*/
-
     astar.makePlan(grid, start, goal, came_from, cost_so_far);
+    reconstruct_path(start, goal, came_from);
+
+    dfs.makePlan (grid, start, goal, came_from, cost_so_far);
+    reconstruct_path(start, goal, came_from);
 
     /*draw_grid(grid, 2, nullptr, &came_from, nullptr);
     std::cout << '\n';
     draw_grid(grid, 3, &cost_so_far, nullptr, nullptr);
     std::cout << '\n';*/
-    std::vector<GridLocation> path = reconstruct_path(start, goal, came_from);
     //draw_grid(grid, 3, nullptr, nullptr, &path);
-    std::cout << "\n";
-    for(int i=0; i<path.size(); ++i)
-        std::cout << path[i] << ' ';
 
     /**
     BONUS POINTS: 
