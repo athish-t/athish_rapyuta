@@ -17,7 +17,7 @@
 
 using namespace amrita2019;
 
-void Planner::initialize(std::string map_path, SquareGrid& grid) {
+SquareGrid InitPlanner::initialize(std::string map_path) {
     /**
     PLEASE FILL IN YOUR LOGIC TO OPEN THIS FILE AND CONVERT TO THE DATASTRUCTURE OF YOUR CHOICE.
     **/
@@ -31,6 +31,7 @@ void Planner::initialize(std::string map_path, SquareGrid& grid) {
     	getline(infile,inputLine);
     	//std::cout << inputLine <<"\n";
     }
+    SquareGrid grid(110, 110);
     for(row = 0; row<110; row++)
     {
     	for(col = 0; col<110 ;col++)
@@ -45,6 +46,7 @@ void Planner::initialize(std::string map_path, SquareGrid& grid) {
       	//cout<<endl;
     }
     infile.close();
+    return grid;
 }
 
 bool DFSPlanner::makePlan(SquareGrid graph, GridLocation start, GridLocation goal, std::map<GridLocation, GridLocation>& came_from, std::map<GridLocation, double>& cost_so_far) 

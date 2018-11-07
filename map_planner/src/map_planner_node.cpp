@@ -19,10 +19,11 @@ int main (int argc, char *argv[]) {
     std::cout << "Planner executable called" << std::endl;
     std::string map_path = "C:/Users/Athish/Downloads/Rapyuta/athish_rapyuta/map_planner/data/maze.pgm";
 
+    amrita2019::InitPlanner planner;
     amrita2019::AStarPlanner astar; // construct astar planner.
     amrita2019::DFSPlanner dfs; // construct dfs planner
 
-    SquareGrid grid(110,110);
+    SquareGrid grid = planner.initialize(map_path);
     GridLocation start;
     GridLocation goal;
     std::map<GridLocation, GridLocation> came_from;
@@ -34,8 +35,8 @@ int main (int argc, char *argv[]) {
     std::cin >> goal.x >> goal.y;
     std::cout << std::endl;
 
-    astar.initialize(map_path, grid);
-    dfs.initialize(map_path, grid);
+    //astar.initialize(map_path, grid);
+    //dfs.initialize(map_path, grid);
 
     astar.makePlan(grid, start, goal, came_from, cost_so_far);
     std::cout << "\nPath planned using A* algorithm:\n" ;

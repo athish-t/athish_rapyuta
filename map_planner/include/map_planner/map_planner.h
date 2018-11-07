@@ -93,19 +93,19 @@ namespace amrita2019 {
        * @param plan YOUR SOLUTION (NOTE: IT IS PASSED BY REFERENCE!)
        * @return PLEASE RETURN TRUE IF YOUR ALGORITHM WAS ABLE TO COMPUTE THE PLAN IN THE INHERTIED CLASS
        */
-      virtual bool makePlan(SquareGrid graph, GridLocation start, GridLocation goal, std::map<GridLocation, GridLocation>& came_from, std::map<GridLocation, double>& cost_so_far) = 0;
+      bool makePlan(SquareGrid graph, GridLocation start, GridLocation goal, std::map<GridLocation, GridLocation>& came_from, std::map<GridLocation, double>& cost_so_far);
 
       /**
        * @brief  Initialization function for the BaseGlobalPlanner
        * @param  path of the bitmap
        * @param  TODO: Define a new data structure to convert the bitmap image to YOUR data structure
        */
-      virtual void initialize(std::string map_path ,SquareGrid& grid);
+      SquareGrid initialize(std::string map_path);
 
       /**
        * @brief  Virtual destructor
        */
-      virtual ~Planner(){}
+      ~Planner(){}
 
     protected:
       Planner(){}
@@ -123,6 +123,13 @@ namespace amrita2019 {
         AStarPlanner(){};
         bool makePlan(SquareGrid graph, GridLocation start, GridLocation goal, std::map<GridLocation, GridLocation>& came_from, std::map<GridLocation, double>& cost_so_far); 
         ~AStarPlanner(){}
+  };
+
+  class InitPlanner: public Planner {
+      public:
+        InitPlanner(){};
+        SquareGrid initialize(std::string map_path);
+        ~InitPlanner(){}
   };
 
 };  // namespace nav_core
