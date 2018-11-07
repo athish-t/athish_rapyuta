@@ -35,9 +35,6 @@ int main (int argc, char *argv[]) {
     std::cin >> goal.x >> goal.y;
     std::cout << std::endl;
 
-    //astar.initialize(map_path, grid);
-    //dfs.initialize(map_path, grid);
-
     astar.makePlan(grid, start, goal, came_from, cost_so_far);
     std::cout << "\nPath planned using A* algorithm:\n" ;
     reconstruct_path(start, goal, came_from);

@@ -17,10 +17,8 @@
 
 using namespace amrita2019;
 
-SquareGrid InitPlanner::initialize(std::string map_path) {
-    /**
-    PLEASE FILL IN YOUR LOGIC TO OPEN THIS FILE AND CONVERT TO THE DATASTRUCTURE OF YOUR CHOICE.
-    **/
+SquareGrid InitPlanner::initialize(std::string map_path) 
+{
 	static int row = 0, col = 0, numrows , numcols ;
 	unsigned char ch;
     std::ifstream infile;
@@ -28,13 +26,19 @@ SquareGrid InitPlanner::initialize(std::string map_path) {
     std::string inputLine = "";
     for(int i=0; i<4; i++)
     {
-    	getline(infile,inputLine);
-    	//std::cout << inputLine <<"\n";
+        if (i==2){
+            infile >> numcols;
+            infile >> numrows;
+            getline(infile,inputLine);
+        }
+        else{
+            getline(infile,inputLine);
+        }
     }
-    SquareGrid grid(110, 110);
-    for(row = 0; row<110; row++)
+    SquareGrid grid(numcols,numrows);
+    for(row = 0; row < numrows; row++)
     {
-    	for(col = 0; col<110 ;col++)
+    	for(col = 0; col < numcols ;col++)
     	{
         	infile >> ch;
         	if ((int)ch <250)
