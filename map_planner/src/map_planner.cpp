@@ -1,19 +1,11 @@
 #include <map_planner/map_planner.h>
 #include <grid/grid.h>
 #include <iostream>
-#include <iomanip>
 #include <map>
-#include <set>
-#include <array>
 #include <vector>
-#include <utility>
 #include <queue>
-#include <tuple>
-#include <algorithm>
-#include <cstdlib>
 #include <string>
 #include <fstream>
-#include <sstream>
 #include <stack>
 
 using namespace amrita2019;
@@ -26,6 +18,7 @@ SquareGrid InitPlanner::initialize(std::string map_name)
     std::ifstream infile;
     infile.open(map_path, std::ios::binary);  
     std::string inputLine = "";
+    //iterate to skip through first 4 lines and reach pixel data
     for(int i=0; i<4; i++)
     {
         if (i==2){
@@ -37,7 +30,8 @@ SquareGrid InitPlanner::initialize(std::string map_name)
             getline(infile,inputLine);
         }
     }
-    SquareGrid grid(numcols,numrows);
+    SquareGrid grid(numcols,numrows); //call constructor to initialize grid
+    //read pixel data
     for(row = 0; row < numrows; row++)
     {
     	for(col = 0; col < numcols ;col++)
@@ -45,7 +39,7 @@ SquareGrid InitPlanner::initialize(std::string map_name)
         	infile >> ch;
         	if ((int)ch <250)
         	{
-        		add_Wall(grid,col,row);
+        		add_Wall(grid,col,row); //add walls when black pixel is encountered
         	}
       	}
     }

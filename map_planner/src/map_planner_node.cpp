@@ -1,18 +1,5 @@
 #include <map_planner/map_planner.h>
 #include <iostream>
-#include <iomanip>
-#include <map>
-#include <set>
-#include <array>
-#include <vector>
-#include <utility>
-#include <queue>
-#include <tuple>
-#include <algorithm>
-#include <cstdlib>
-#include <string>
-#include <fstream>
-
 
 int main (int argc, char *argv[]) {
 
@@ -35,7 +22,7 @@ int main (int argc, char *argv[]) {
     std::cin >> goal.x >> goal.y;
     std::cout << std::endl;
 
-    //descriptions of all arguments passed are written in map_planner.h along with function declarations
+    //descriptions of all arguments passed are written in map_planner.h 
     astar.makePlan(grid, start, goal, path);
     dfs.makePlan (grid, start, goal, path);
 

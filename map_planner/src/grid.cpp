@@ -1,20 +1,6 @@
 #include <map_planner/map_planner.h>
-#include <iostream>
-#include <iomanip>
-#include <map>
-#include <set>
-#include <array>
-#include <vector>
-#include <utility>
-#include <queue>
-#include <tuple>
-#include <algorithm>
-#include <cstdlib>
-#include <string>
-#include <fstream>
-#include <sstream>
-#include <stack>
 
+//member functions of class SquareGrid
 bool SquareGrid::in_bounds(GridLocation id) const 
 {
     return 0 <= id.x && id.x < width
@@ -45,26 +31,9 @@ std::vector<GridLocation> SquareGrid::neighbors(GridLocation id) const
     return results;
 }
 
-bool operator == (GridLocation a, GridLocation b) {
-  return a.x == b.x && a.y == b.y;
-}
-
-bool operator != (GridLocation a, GridLocation b) {
-  return !(a == b);
-}
-
-bool operator < (GridLocation a, GridLocation b) {
-  return std::tie(a.x, a.y) < std::tie(b.x, b.y);
-}
-
-std::basic_iostream<char>::basic_ostream& operator<<(std::basic_iostream<char>::basic_ostream& out, const GridLocation& loc) {
-  out << '(' << loc.x << ',' << loc.y << ')';
-  return out;
-}
-
 inline extern double heuristic(GridLocation a, GridLocation b) 
 {
-  return std::abs(a.x - b.x) + std::abs(a.y - b.y);
+  return std::abs(a.x - b.x) + std::abs(a.y - b.y); //manhattan distance
 }
 
 inline extern void add_Wall(SquareGrid& grid, int x, int y) {
@@ -87,4 +56,22 @@ std::vector<GridLocation> reconstruct_path(GridLocation start, GridLocation goal
         std::cout << path[i] << ' ';
   std::cout << std::endl ;
   return path;
+}
+
+//overloading operators to make comparing grid locations easy
+bool operator == (GridLocation a, GridLocation b) {
+  return a.x == b.x && a.y == b.y;
+}
+
+bool operator != (GridLocation a, GridLocation b) {
+  return !(a == b);
+}
+
+bool operator < (GridLocation a, GridLocation b) {
+  return std::tie(a.x, a.y) < std::tie(b.x, b.y);
+}
+
+std::basic_iostream<char>::basic_ostream& operator<<(std::basic_iostream<char>::basic_ostream& out, const GridLocation& loc) {
+  out << '(' << loc.x << ',' << loc.y << ')';
+  return out;
 }

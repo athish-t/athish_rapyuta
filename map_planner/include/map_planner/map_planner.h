@@ -2,18 +2,6 @@
 #define MAP_PLANNER_MAP_PLANNER_H
 
 #include <grid/grid.h>
-#include <iostream>
-#include <string>
-#include <vector>
-#include <iomanip>
-#include <map>
-#include <set>
-#include <array>
-#include <utility>
-#include <queue>
-#include <tuple>
-#include <algorithm>
-#include <cstdlib>
 
 namespace amrita2019 {
 
@@ -28,7 +16,7 @@ namespace amrita2019 {
        * @param start: start GridLocation of the robot
        * @param goal: goal that needs to be reached by the robot
        * @param path: YOUR SOLUTION (NOTE: IT IS PASSED BY REFERENCE!)
-       * @return PLEASE RETURN TRUE IF YOUR ALGORITHM WAS ABLE TO COMPUTE THE PLAN IN THE INHERTIED CLASS
+       * @return RETURN TRUE IF YOUR ALGORITHM WAS ABLE TO COMPUTE THE PLAN IN THE INHERTIED CLASS
        */
       bool makePlan(SquareGrid graph, GridLocation start, GridLocation goal, std::vector<GridLocation>& path);
 
