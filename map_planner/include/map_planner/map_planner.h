@@ -1,6 +1,7 @@
 #ifndef MAP_PLANNER_MAP_PLANNER_H
 #define MAP_PLANNER_MAP_PLANNER_H
 
+#include <grid/grid.h>
 #include <iostream>
 #include <string>
 #include <vector>
@@ -14,70 +15,6 @@
 #include <algorithm>
 #include <cstdlib>
 
-struct GridLocation {
-  int x, y;
-};
-
-struct SquareGrid {
-
-  std::array<GridLocation, 8> SquareGrid::DIRS =
-  {
-      GridLocation{1, 0}, GridLocation{0, -1}, GridLocation{-1, 0}, GridLocation{0, 1}, GridLocation{1, 1}, GridLocation{-1, 1}, GridLocation{-1, -1}, GridLocation{1, -1}
-  };
-
-  int width, height;
-  std::set<GridLocation> walls;
-
-  SquareGrid(int width_, int height_)
-     : width(width_), height(height_) {}
-
-  bool in_bounds(GridLocation id) const; 
-
-  bool passable(GridLocation id) const;
-
-  std::vector<GridLocation> neighbors(GridLocation id) const;
-};
-
-double heuristic(GridLocation a, GridLocation b);
-
-bool operator == (GridLocation a, GridLocation b);
-bool operator != (GridLocation a, GridLocation b);
-bool operator < (GridLocation a, GridLocation b);
-std::basic_iostream<char>::basic_ostream& operator<<(std::basic_iostream<char>::basic_ostream& out, const GridLocation& loc);
-
-void add_Wall(SquareGrid& grid, int x, int y);
-SquareGrid initializeGrid(int width, int height);
-
-
-void draw_grid(const SquareGrid& graph, int field_width,
-               std::map<GridLocation, double>* distances=nullptr,
-               std::map<GridLocation, GridLocation>* point_to=nullptr,
-               std::vector<GridLocation>* path=nullptr);
-
-
-template<typename T, typename priority_t>
-struct PriorityQueue 
-{
-  typedef std::pair<priority_t, T> PQElement;
-  std::priority_queue <PQElement, std::vector<PQElement>, std::greater<PQElement>> elements;
-
-  inline bool empty() const {
-     return elements.empty();
-  }
-
-  inline void put(T item, priority_t priority) {
-    elements.emplace(priority, item);
-  }
-
-  T get() {
-    T best_item = elements.top().second;
-    elements.pop();
-    return best_item;
-  }
-};
-
-void reconstruct_path(GridLocation start, GridLocation goal, std::map<GridLocation, GridLocation> came_from);
-
 namespace amrita2019 {
 
   /**
@@ -88,19 +25,19 @@ namespace amrita2019 {
     public:
       /**
        * @brief computes a plan given the start and end goal.
-       * @param start start GridLocation of the robot
-       * @param goal goal that needs to be reached by the robot
-       * @param plan YOUR SOLUTION (NOTE: IT IS PASSED BY REFERENCE!)
+       * @param start: start GridLocation of the robot
+       * @param goal: goal that needs to be reached by the robot
+       * @param path: YOUR SOLUTION (NOTE: IT IS PASSED BY REFERENCE!)
        * @return PLEASE RETURN TRUE IF YOUR ALGORITHM WAS ABLE TO COMPUTE THE PLAN IN THE INHERTIED CLASS
        */
-      bool makePlan(SquareGrid graph, GridLocation start, GridLocation goal, std::map<GridLocation, GridLocation>& came_from, std::map<GridLocation, double>& cost_so_far);
+      bool makePlan(SquareGrid graph, GridLocation start, GridLocation goal, std::vector<GridLocation>& path);
 
       /**
        * @brief  Initialization function for the BaseGlobalPlanner
        * @param  path of the bitmap
        * @param  TODO: Define a new data structure to convert the bitmap image to YOUR data structure
        */
-      SquareGrid initialize(std::string map_path);
+      SquareGrid initialize(std::string map_name);
 
       /**
        * @brief  Virtual destructor
@@ -114,14 +51,14 @@ namespace amrita2019 {
   class DFSPlanner: public Planner {
       public:
         DFSPlanner(){};
-        bool makePlan(SquareGrid graph, GridLocation start, GridLocation goal, std::map<GridLocation, GridLocation>& came_from, std::map<GridLocation, double>& cost_so_far); 
+        bool makePlan(SquareGrid graph, GridLocation start, GridLocation goal, std::vector<GridLocation>& path);
         ~DFSPlanner(){};
   };
 
   class AStarPlanner: public Planner {
       public:
         AStarPlanner(){};
-        bool makePlan(SquareGrid graph, GridLocation start, GridLocation goal, std::map<GridLocation, GridLocation>& came_from, std::map<GridLocation, double>& cost_so_far); 
+        bool makePlan(SquareGrid graph, GridLocation start, GridLocation goal, std::vector<GridLocation>& path);
         ~AStarPlanner(){}
   };
 

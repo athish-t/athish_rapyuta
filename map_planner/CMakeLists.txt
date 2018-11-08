@@ -14,6 +14,7 @@ include_directories(
 
 add_library(map_planner
    src/map_planner.cpp
+   src/grid.cpp
 )
 
 add_executable(map_planner_node src/map_planner_node.cpp)

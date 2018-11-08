@@ -17,43 +17,27 @@
 int main (int argc, char *argv[]) {
 
     std::cout << "Planner executable called" << std::endl;
-    std::string map_path = "C:/Users/Athish/Downloads/Rapyuta/athish_rapyuta/map_planner/data/maze.pgm";
+    std::string map_name = "maze.pgm";
 
-    amrita2019::InitPlanner planner;
+    amrita2019::InitPlanner planner; //construct planner to initialize grid from image
     amrita2019::AStarPlanner astar; // construct astar planner.
     amrita2019::DFSPlanner dfs; // construct dfs planner
 
-    SquareGrid grid = planner.initialize(map_path);
+    SquareGrid grid = planner.initialize(map_name);
     GridLocation start;
     GridLocation goal;
-    std::map<GridLocation, GridLocation> came_from;
-    std::map<GridLocation, double> cost_so_far;
+    std::vector<GridLocation> path;
 
+    //Get start and goal coordinates from the user
     std::cout << "Enter start coordinates: ";
     std::cin >> start.x >> start.y;
     std::cout << "\nEnter goal coordintes: ";
     std::cin >> goal.x >> goal.y;
     std::cout << std::endl;
 
-    astar.makePlan(grid, start, goal, came_from, cost_so_far);
-    std::cout << "\nPath planned using A* algorithm:\n" ;
-    reconstruct_path(start, goal, came_from);
-
-    dfs.makePlan (grid, start, goal, came_from, cost_so_far);
-    std::cout << "\nPath planned using DFS algorithm:\n" ;
-    reconstruct_path(start, goal, came_from);
-
-    /*draw_grid(grid, 2, nullptr, &came_from, nullptr);
-    std::cout << '\n';
-    draw_grid(grid, 3, &cost_so_far, nullptr, nullptr);
-    std::cout << '\n';*/
-    //draw_grid(grid, 3, nullptr, nullptr, &path);
-
-    /**
-    BONUS POINTS: 
-    1. use boost smart pointer
-    2. use thread: one thread should plan a path using DFS and the other thread should plan the plan using Astar
-    **/
+    //descriptions of all arguments passed are written in map_planner.h along with function declarations
+    astar.makePlan(grid, start, goal, path);
+    dfs.makePlan (grid, start, goal, path);
 
     return 0;
 }
