@@ -40,8 +40,20 @@ This is used in both DFS and A* to keep track of which node was visited first be
 std::map<GridLocation, GridLocation> came_from is a map/dictionary whose mapped value is the previously visited node, and the key value is the current node.
 
 ### cost_so_far
-Used by the A* algorithm to 
+Used by the A* algorithm to update the number of nodes it has visited so far. This when added with the distance to goal gives the priority used in this algorithm
+std::map<GridLocation, double> cost_so_far is a map whose key value is a grid location, and the mapped value is the distance in nodes from the start
 
+### GridLocation{}
+Class that contains x and y coordinates of a particular pixel
+
+### heuristic()
+Function to calculate distance from current location in grid to the goal, for use in A* algorithm. Here, the manhattan Distance is calculated.
+
+### reconstructpath(start, goal, came_from)
+Function that recieves the start and goal locations and uses the came_from map to construct a path starting from the goal to the start. Then the vector of grid locations is reversed to get the path from start to goal.
+It returns std::vector<GridLocation>.
+
+### SquareGrid{}
 
 
 
