@@ -30,7 +30,7 @@ struct SquareGrid {
 
   bool in_bounds(GridLocation id) const; //check if location is inside the dimensions of the grid
 
-  bool passable(GridLocation id) const; //return true if 'id' is not found in 'walls'
+  bool notWall(GridLocation id) const; //return true if 'id' is not found in 'walls'
 
   std::vector<GridLocation> neighbors(GridLocation id) const; //return all neighbouring nodes, by checking for walls
 

@@ -10,7 +10,7 @@ bool SquareGrid::in_bounds(GridLocation id) const
         && 0 <= id.y && id.y < height;
 }
 
-bool SquareGrid::passable(GridLocation id) const 
+bool SquareGrid::notWall(GridLocation id) const 
 {
     return walls.find(id) == walls.end();
 }
@@ -21,7 +21,7 @@ std::vector<GridLocation> SquareGrid::neighbors(GridLocation id) const
 
     for (GridLocation dir : DIRS) {
       GridLocation next{id.x + dir.x, id.y + dir.y};
-      if (in_bounds(next) && passable(next)) {
+      if (in_bounds(next) && notWall(next)) {
         results.push_back(next);
       }
     }
@@ -63,7 +63,7 @@ std::vector<GridLocation> reconstruct_path(GridLocation start, GridLocation goal
 
 void draw_grid(const SquareGrid graph, std::vector<GridLocation> path) 
 {
-  int field_width = 3;
+  int field_width = 1;
   for (int y = 0; y != graph.height; ++y) 
   {
     for (int x = 0; x != graph.width; ++x) 
