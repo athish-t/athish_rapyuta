@@ -37,6 +37,13 @@ SquareGrid InitPlanner::initialize(std::string map_name)
     	for(col = 0; col < numcols ;col++)
     	{
         	infile >> ch;
+            if(col==0 && (int)ch !=255)
+            {
+                while((int)ch!=255)
+                {
+                    infile >> ch;
+                }
+            }
         	if ((int)ch <250)
         	{
         		add_Wall(grid,col,row); //add walls when black pixel is encountered
