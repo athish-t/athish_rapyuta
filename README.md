@@ -37,13 +37,40 @@ In A*, the frontier is a priority queue (not FIFO), where the elements are queue
 
 ### came_from
 This is used in both DFS and A* to keep track of which node was visited first before being in the current node. The reconstruct_path() function uses this to return the final path. It is updated for every node after the algorithm decides which node to visit next.
-std::map<GridLocation, GridLocation> came_from is a map/dictionary whose mapped value is the previously visited node, and the key value is the current node.
+```
+std::map<GridLocation, GridLocation> came_from
+```
+is a map/dictionary whose mapped value is the previously visited node, and the key value is the current node.
 
 ### cost_so_far
-Used by the A* algorithm to 
+Used by the A* algorithm to update the number of nodes it has visited so far. This when added with the distance to goal gives the priority used in this algorithm.
+```
+std::map<GridLocation, double> cost_so_far 
+```
+is a map whose key value is a grid location, and the mapped value is the distance in nodes from the start
 
+### GridLocation{}
+Class that contains x and y coordinates of a particular pixel
 
+### heuristic()
+Function to calculate distance from current location in grid to the goal, for use in A* algorithm. Here, the manhattan Distance is calculated.
 
+### reconstructpath(start, goal, came_from)
+Function that recieves the start and goal locations and uses the came_from map to construct a path starting from the goal to the start. Then the vector of grid locations is reversed to get the path from start to goal.
+It returns std::vector<GridLocation>.
+
+### SquareGrid{}
+#### DIRS
+Array that contains directions of traversal from a node. Here, traversal is possible in all eight directions.
+#### Walls
+A std::set<GridLocation> that contains all the grid locations that are walls. This set is updated while reading from the image file, and cannot be modified later.
+#### neighbours(GridLocation)
+A member function that recieves a grid location as argument and returns a vector consisting of its neighboring nodes. It uses the DIRS directions defined and the walls set to find neighbours.
+       std::vector<GridLocation> neighbors(GridLocation){}
+#### in_bounds(GridLocation)
+Returns true if a node is within boundaries of the grid
+#### passable(GridLocation)
+Returns true if a node is not a wall.
 
 ## Overview of algorithms used
 ### DFS
@@ -59,6 +86,8 @@ A* is a very commonly used for shortest path planning. Unlike BFS and DFS that s
         I tried this, but encountered some problem with sharing variables so the final path was not correct. So I deleted all changes I made completely. However, I missed adding the changes to git, so am not able to retrieve them for documentation
 2. Use smart pointers
         Initial study was done, but not tried yet.
+3. Grouping pixels as a node to make the algorithm faster
+4. Prioritize traversal direction (might be useful in DFS)
         
 
 
