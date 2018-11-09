@@ -81,13 +81,14 @@ DFS is not a commonly used algorithm for shortest path planning, as opposed to B
 ### A*
 A* is a very commonly used for shortest path planning. Unlike BFS and DFS that searches the graph in all directions, A* tends to search in a more efficient manner. It used a priority queue to keep track of the visited nodes, where the priority is the sum of distance traversed so far and the distance to goal. This is different from Dijkstra's algorithm in the fact that Dijkstra's uses only the distance travelled so far, but A* also factors in the distance to goal. The node with the highest priority is visited first.
 
-## Future work
+## Future work and known issues
 1. Implement multithreading to run the two algorithms in two threads
         I tried this, but encountered some problem with sharing variables so the final path was not correct. So I deleted all changes I made completely. However, I missed adding the changes to git, so am not able to retrieve them for documentation
 2. Use smart pointers
         Initial study was done, but not tried yet.
 3. Grouping pixels as a node to make the algorithm faster
-4. Prioritize traversal direction (might be useful in DFS)
+4. Add logic to skip through the extra characters at the end of rows in .pgm file
+5. Prioritize traversal direction (might be useful in DFS)
 
 ## Output of program
 Wall: #         Path: @
