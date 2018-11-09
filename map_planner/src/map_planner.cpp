@@ -37,7 +37,7 @@ SquareGrid InitPlanner::initialize(std::string map_name)
     	for(col = 0; col < numcols ;col++)
     	{
         	infile >> ch;
-            if(col==0 && (int)ch !=255)
+            if(col==0 && (int)ch !=255) // logic to skip through excess characters at end of some rows
             {
                 while((int)ch!=255)
                 {
