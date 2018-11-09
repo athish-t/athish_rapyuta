@@ -54,7 +54,17 @@ Function that recieves the start and goal locations and uses the came_from map t
 It returns std::vector<GridLocation>.
 
 ### SquareGrid{}
-
+#### DIRS
+Array that contains directions of traversal from a node. Here, traversal is possible in all eight directions.
+#### Walls
+A std::set<GridLocation> that contains all the grid locations that are walls. This set is updated while reading from the image file, and cannot be modified later.
+#### neighbours(GridLocation)
+A member function that recieves a grid location as argument and returns a vector consisting of its neighboring nodes. It uses the DIRS directions defined and the walls set to find neighbours.
+        std::vector<GridLocation> neighbors(GridLocation){}
+#### in_bounds(GridLocation)
+Returns true if a node is within boundaries of the grid
+#### passable(GridLocation)
+Returns true if a node is not a wall.
 
 
 ## Overview of algorithms used
