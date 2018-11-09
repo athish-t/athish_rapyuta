@@ -23,14 +23,14 @@ struct SquareGrid {
   };
 
   int width, height;
+
   std::set<GridLocation> walls;
 
-  SquareGrid(int width_, int height_)
-     : width(width_), height(height_) {}
+  SquareGrid(int width_, int height_) : width(width_), height(height_) {}
 
   bool in_bounds(GridLocation id) const; //check if location is inside the dimensions of the grid
 
-  bool passable(GridLocation id) const; //used by neighbors() function to check for walls
+  bool passable(GridLocation id) const; //return true if 'id' is not found in 'walls'
 
   std::vector<GridLocation> neighbors(GridLocation id) const; //return all neighbouring nodes, by checking for walls
 
@@ -39,6 +39,8 @@ struct SquareGrid {
 inline extern double heuristic(GridLocation a, GridLocation b); // heuristic for A* algorithm
 
 inline extern void add_Wall(SquareGrid& grid, int x, int y);
+
+void draw_grid(const SquareGrid graph, std::vector<GridLocation> path);
 
 /* Function reconstructs path between start and goal, using the came_from map created in the makePlan algorithm
  * @param start: start GridLocation of the robot

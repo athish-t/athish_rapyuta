@@ -78,6 +78,7 @@ bool DFSPlanner::makePlan(SquareGrid graph, GridLocation start, GridLocation goa
     }
     std::cout << "\nPath planned using DFS algorithm:\n" ;
     path = reconstruct_path(start, goal, came_from);
+    draw_grid(graph, path);
     return true;
 }
 
@@ -117,5 +118,6 @@ bool AStarPlanner::makePlan(SquareGrid graph, GridLocation start, GridLocation g
 	}
     std::cout << "\nPath planned using A* algorithm:\n" ;
     path = reconstruct_path(start, goal, came_from);
+    draw_grid(graph, path);
     return true;
 }

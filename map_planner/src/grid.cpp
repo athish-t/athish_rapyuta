@@ -1,4 +1,7 @@
 #include <map_planner/map_planner.h>
+#include <iomanip>
+#include <string>
+#include <vector>
 
 //member functions of class SquareGrid
 bool SquareGrid::in_bounds(GridLocation id) const 
@@ -56,6 +59,26 @@ std::vector<GridLocation> reconstruct_path(GridLocation start, GridLocation goal
         std::cout << path[i] << ' ';
   std::cout << std::endl ;
   return path;
+}
+
+void draw_grid(const SquareGrid graph, std::vector<GridLocation> path) 
+{
+  int field_width = 3;
+  for (int y = 0; y != graph.height; ++y) 
+  {
+    for (int x = 0; x != graph.width; ++x) 
+    {
+      GridLocation id {x, y};
+      std::cout << std::left << std::setw(field_width);
+      if (graph.walls.find(id) != graph.walls.end()) 
+        std::cout << std::string(field_width, '#'); 
+      else if (find(path.begin(), path.end(), id) != path.end()) 
+        std::cout << '@';
+      else 
+        std::cout << '.';
+    }
+    std::cout << '\n';
+  }
 }
 
 //overloading operators to make comparing grid locations easy
