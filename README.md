@@ -69,7 +69,7 @@ A member function that recieves a grid location as argument and returns a vector
        std::vector<GridLocation> neighbors(GridLocation){}
 #### in_bounds(GridLocation)
 Returns true if a node is within boundaries of the grid
-#### passable(GridLocation)
+#### notWall(GridLocation)
 Returns true if a node is not a wall.
 
 ## Overview of algorithms used
