@@ -70,6 +70,7 @@ bool DFSPlanner::makePlan(SquareGrid graph, GridLocation start, GridLocation goa
           {
             if (came_from.find(next) == came_from.end()) 
             {
+                //did not find next in came_from
                 frontier.push(next);
                 came_from[next] = current;
             }
@@ -104,7 +105,7 @@ bool AStarPlanner::makePlan(SquareGrid graph, GridLocation start, GridLocation g
 
 	    for (GridLocation next : graph.neighbors(current)) 
 	    {
-		    double new_cost = cost_so_far[current];
+		    double new_cost = cost_so_far[current] + 1;
 		    if (cost_so_far.find(next) == cost_so_far.end() || new_cost < cost_so_far[next]) 
 		    {
 		      cost_so_far[next] = new_cost;

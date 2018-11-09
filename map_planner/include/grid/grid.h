@@ -33,6 +33,7 @@ struct SquareGrid {
   bool passable(GridLocation id) const; //used by neighbors() function to check for walls
 
   std::vector<GridLocation> neighbors(GridLocation id) const; //return all neighbouring nodes, by checking for walls
+
 };
 
 inline extern double heuristic(GridLocation a, GridLocation b); // heuristic for A* algorithm
