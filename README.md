@@ -29,7 +29,20 @@ https://www.redblobgames.com/pathfinding/a-star/introduction.html
 
 Most of the knowledge required for programming this task was obtained from the above website. It contains interactive tools to understand how A* algorithm works. The author has also provided a basic template of code snippets to start implementing the algorithm in our own project, and the program I have written is inspired from this.
 
-## Some variables used in the code
+## Description of some variables, classes and functions used
+### Frontier 
+In DFS, it is the stack that keeps track of the visited nodes. The stack is what gives the algorithm its 'Depth-First' logic because of its LIFO approach. On the other hand, BFS uses a queue to keep track of the visited nodes.
+
+In A*, the frontier is a priority queue (not FIFO), where the elements are queued according to its priority value. Here we access elements from the priority queue that has the least priority. The priority value here is the sum of distance travelled so far and distance to goal.
+
+### came_from
+This is used in both DFS and A* to keep track of which node was visited first before being in the current node. The reconstruct_path() function uses this to return the final path. It is updated for every node after the algorithm decides which node to visit next.
+std::map<GridLocation, GridLocation> came_from is a map/dictionary whose mapped value is the previously visited node, and the key value is the current node.
+
+### cost_so_far
+Used by the A* algorithm to 
+
+
 
 
 ## Overview of algorithms used
